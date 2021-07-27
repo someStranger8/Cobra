@@ -1,6 +1,6 @@
 import os
 def hackwin():
-    os.system("cat C:\Windows\System32\config")
+    os.system("cat \Windows\System32\config")
 def hackmac():
     os.system("cat /var/db/dslocal/nodes/Default/users")
 def hacklin():
@@ -27,9 +27,10 @@ def hackwifi():
     clear()
     os.system("fern-wifi-cracker")
 def hackpasswd():
+    email=input("[*] enter email: ")
     os.system("pip3 install h8mail")
     clear()
-    os.system("h8mail")
+    os.system("h8mail -t "+ email+"")
 def clear():
     os.system("clear")
 def mitm():
