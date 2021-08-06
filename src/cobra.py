@@ -1,4 +1,5 @@
 import os
+clear = lambda: os.system("clear")
 def hackwin():
     os.system("cat \Windows\System32\config")
 def hackmac():
@@ -6,9 +7,8 @@ def hackmac():
 def hacklin():
     os.system("cat /etc/passwd")
     os.system("cat /etc/shadow")
-def ddos():
-    ddos=input("[*] enter ip or URL: ")
-    os.system("ping "+ ddos+"")
+def ddos(attack):
+    os.system("ping "+ attack+"")
 def sqlinject():
     os.system("pip3 install sqlmap")
     clear()
@@ -26,19 +26,15 @@ def hackwifi():
     os.system("apt install fern-wifi-cracker -y")
     clear()
     os.system("fern-wifi-cracker")
-def hackpasswd():
-    email=input("[*] enter email: ")
+def hackpasswd(email):
     os.system("pip3 install h8mail")
     clear()
     os.system("h8mail -t "+ email+"")
-def clear():
-    os.system("clear")
 def mitm():
     os.system("apt instal wireshark -y")
     clear()
     os.system("sudo wireshark")
-def scan():
-    nmap=input("[*] enter ip or URL: ")
+def scan(nmap):
     os.system("apt install nmap -y")
     clear()
     os.system("nmap "+ nmap+"")
