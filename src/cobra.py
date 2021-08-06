@@ -55,4 +55,6 @@ def install(package):
     clear()
 def run(command):
     os.system(command)
+def update():
+    os.system("sudo apt update && apt upgrade")
 print("its time to hack the world")
