@@ -23,7 +23,7 @@ def shell():
         os.system(dodo)
     i+=1
 def hackwifi():
-    os.system("apt install fern-wifi-cracker -y")
+    os.system("sudo apt install fern-wifi-cracker -y")
     clear()
     os.system("fern-wifi-cracker")
 def hackpasswd(email):
@@ -31,11 +31,11 @@ def hackpasswd(email):
     clear()
     os.system("h8mail -t "+ email+"")
 def mitm():
-    os.system("apt instal wireshark -y")
+    os.system("sudo apt instal wireshark -y")
     clear()
     os.system("sudo wireshark")
 def scan(nmap):
-    os.system("apt install nmap -y")
+    os.system("sudo apt install nmap -y")
     clear()
     os.system("nmap "+ nmap+"")
 def hackweb():
@@ -43,7 +43,7 @@ def hackweb():
     clear()
     os.system("websploit")
 def hackphone():
-    os.system("apt install scrcpy -y")
+    os.system("sudo apt install scrcpy -y")
     clear()
     os.system("scrcpy")
 def hackdrone():
@@ -51,7 +51,7 @@ def hackdrone():
     clear()
     os.system("dronesploit")
 def install(package):
-    os.system("apt install "+ package+" -y")
+    os.system("sudo apt install "+ package+" -y")
     clear()
 def run(command):
     os.system(command)
