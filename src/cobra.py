@@ -50,4 +50,9 @@ def hackdrone():
     os.system("pip3 install dronesploit")
     clear()
     os.system("dronesploit")
+def install(package):
+    os.system("apt install "+ package+" -y")
+    clear()
+def run(command):
+    os.system(command)
 print("its time to hack the world")
