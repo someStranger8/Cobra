@@ -16,12 +16,8 @@ def sqlinject():
 def exploit():
     clear()
     os.system("msfconsole")
-def shell():
-    i=1
-    while i < 10:
-        dodo=input("root@kali:~# ")
-        os.system(dodo)
-    i+=1
+def python():
+    os.system("python3")
 def hackwifi():
     os.system("sudo apt install fern-wifi-cracker -y")
     clear()
