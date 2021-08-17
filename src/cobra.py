@@ -6,7 +6,7 @@ def hackmac():
     os.system("cat /var/db/dslocal/nodes/Default/users")
 def hacklin():
     os.system("cat /etc/passwd")
-    os.system("cat /etc/shadow")
+    os.system("sudo cat /etc/shadow")
 def ddos(attack):
     os.system("ping "+ attack+"")
 def sqlinject():
