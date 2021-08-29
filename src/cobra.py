@@ -49,4 +49,6 @@ def install(package):
     clear()
 def run(command):
     os.system(command)
+def payload(name):
+    os.system("nano "+ name+"")
 print("its time to hack the world")
