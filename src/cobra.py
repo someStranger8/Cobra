@@ -32,6 +32,8 @@ def scan(nmap):
     os.system("sudo apt install nmap -y")
     clear()
     os.system("nmap "+ nmap+"")
+def git(link):
+    os.system("git clone "+ link)
 def hackweb():
     os.system("pip3 install websploit")
     clear()
