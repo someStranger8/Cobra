@@ -23,7 +23,7 @@ def hackwifi():
 def hackpasswd(username, wordlist, ip):
     os.system("sudo apt install hydra -y")
     clear()
-    os.system("hydra -l "+ username+" -P "+ wordlist+" ftp://"+ ip+"")
+    os.system("hydra -l "+ username+" -P "+ wordlist+" ssh://"+ ip+"")
 def mitm():
     os.system("sudo apt instal wireshark -y")
     clear()
