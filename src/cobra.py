@@ -1,56 +1,118 @@
+
+# imports
 import os
+from tdqm import trange
+
+# define clear
 clear = lambda: os.system("clear")
-def hackwin():
-    os.system("cat \Windows\System32\config")
-def hackmac():
-    os.system("cat /var/db/dslocal/nodes/Default/users")
-def hacklin():
-    os.system("cat /etc/passwd")
-    os.system("cat /etc/shadow")
-def ddos(attack):
-    os.system("ping "+ attack+"")
-def sqlinject():
-    os.system("pip3 install sqlmap")
-    clear()
-    os.system("sqlmap --sqlmap-shell")
-def exploit():
-    clear()
-    os.system("msfconsole")
-def hackwifi():
-    os.system("sudo apt install fern-wifi-cracker -y")
-    clear()
-    os.system("fern-wifi-cracker")
-def hackpasswd(username, wordlist, ip):
-    os.system("sudo apt install hydra -y")
-    clear()
-    os.system("hydra -l "+ username+" -P "+ wordlist+" ssh://"+ ip+"")
-def mitm():
-    os.system("sudo apt instal wireshark -y")
-    clear()
-    os.system("sudo wireshark")
-def scan(nmap):
-    os.system("sudo apt install nmap -y")
-    clear()
-    os.system("nmap "+ nmap+"")
-def git(link):
-    os.system("git clone "+ link)
-def hackweb():
-    os.system("pip3 install websploit")
-    clear()
-    os.system("websploit")
-def hackphone():
-    os.system("sudo apt install scrcpy -y")
-    clear()
-    os.system("scrcpy")
-def hackdrone():
-    os.system("pip3 install dronesploit")
-    clear()
-    os.system("dronesploit")
-def install(package):
-    os.system("sudo apt install "+ package+" -y")
-    clear()
-def run(command):
-    os.system(command)
-def payload(name):
-    os.system("nano "+ name+"")
+
+
+# web exploitation class
+def web_exploit():
+    # ddos
+    def ping_flood(attack):
+        os.system("ping "+ attack+"")
+    
+    # sql injection
+    def sqlinject():
+        # load
+        for i in trange():
+            os.system("pip3 install sqlmap")
+        
+        # start
+        os.system("sqlmap --sqlmap-shell")
+    
+    def hackweb():
+        # load
+        for i in trange():
+            os.system("pip3 install websploit")
+        
+        # start
+        os.system("websploit")
+
+
+# os exploitation class
+def os_exploit():
+    # windows passwd file
+    def hackwin():
+        os.system("cat \Windows\System32\config")
+    
+    # mac os passwd file
+    def hackmac():
+        os.system("cat /var/db/dslocal/nodes/Default/users")
+    
+    # linux passwd file
+    def hacklin():
+        os.system("cat /etc/passwd")
+        os.system("cat /etc/shadow")
+    
+    # brute force attack
+    def brute_force(username, wordlist, ip):
+        # load
+        for i in trange():
+            os.system("sudo apt install hydra -y")
+        
+        # brute force   
+        os.system("hydra -l "+ username+" -P "+ wordlist+" ssh://"+ ip+"")
+        
+
+# wifi exploit class
+def wifi_exploit():
+    # mitm
+    def mitm():
+        # load
+        for i in trange():
+            os.system("sudo apt instal wireshark -y")
+       
+        # start
+        os.system("sudo wireshark")
+    
+    # hack wifi
+    def hack_wifi():
+        # load
+        for i in trange():
+            os.system("sudo apt install fern-wifi-cracker -y")
+        
+        # hack wifi
+        os.system("fern-wifi-cracker")
+    
+    # scan
+    def scan(nmap):
+        # load
+        for i in trange():
+            os.system("sudo apt install nmap -y")
+        
+        # scan
+        os.system("nmap "+ nmap+"")
+
+# other tools
+def tools():
+    # metasploit
+    def exploit():
+        clear()
+        os.system("msfconsole")
+    
+    # git
+    def git(link):
+        # clone link
+        os.system("git clone "+ link)
+
+    # hack phone
+    def hackphone():
+        # load
+        for i in trange():
+            os.system("sudo apt install scrcpy -y")
+        
+        # start
+        os.system("scrcpy")
+    
+    # hack drone
+    def hackdrone():
+        # load
+        for i in trange():
+            os.system("pip3 install dronesploit")
+        
+        # start
+        os.system("dronesploit")
+
 print("its time to hack the world")
